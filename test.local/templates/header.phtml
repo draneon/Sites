@@ -1,0 +1,30 @@
+
+<?php
+    // turn-on output buffer
+    ob_start();
+?>
+<!doctype html>
+<html>
+<head>
+    <title>
+        <?php
+        
+            if (defined("TITLE")) {
+                print TITLE;
+            }
+        else {
+            print "Title is unknown.";
+        }                    
+        ?>        
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+</head>
+
+<body>
+    
+        <div id="content">
+            <p>
+                Header content goes here..
+            </p>   
+       
+    
