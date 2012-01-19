@@ -14,11 +14,11 @@ class Application_Model_DbTable_Albums extends Zend_Db_Table_Abstract
             throw new Exception("Could not fetch row $id");
         }
         
-        return $row.toArray();
+        return $row->toArray();
     }
     
     
-    public function insertAlbum( $artist, $title ) {
+    public function addAlbum( $artist, $title ) {
         
         $album = array (
             'artist' => $artist,
