@@ -1,4 +1,24 @@
-<br /><br />
+
+<?php
+	$this->title = 'Delete album';
+	$this->headTitle( $this->title );
+
+?>
+
+<p>Are you sure that you want to delete 
+  '<?php echo $this->escape($this->album['title']); ?>' by 
+  '<?php echo $this->escape($this->album['artist']); ?>'?
+</p>
+<form action="<?php echo $this->url(array( 'controller' => 'index', 'action'=>'delete', 'id' => $this->album['id'] )); ?>" method="post">
+	<!-- not including index and id in url() also works ?? -->
+<!--	<form action="<?php echo $this->url(array('action' => 'delete')); ?>" method="post">	-->
+		<div>
+			<input type="hidden" name="id" value="<?php echo $this->album['id']; ?>" />
+			<input type="submit" name="del" value="Yes" />
+			<input type="submit" name="del" value="No" />
+		</div>
+	</form>
+
 <div id="view-content">
 	<p>View script for controller <b>Index</b> and script/action name <b>delete</b></p>
 </div>
