@@ -4,6 +4,8 @@ ini_set('display_errors', true);
 error_reporting(E_ALL);
 
 define("TITLE", "Login form");
+
+// header stuff
 include('templates/header.phtml');
 
 $hint = "
